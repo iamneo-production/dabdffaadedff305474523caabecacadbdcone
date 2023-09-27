@@ -16,12 +16,13 @@ app.use(express.json());
 // Sample data (in-memory storage)
 const items = [
   { id: 1, name: 'Item 1' },
-  { id: 2, name: 'Item 2' },
+ // { id: 2, name: 'Item 2' },
 ];
 
 // Route to get a list of items
 app.get('/items', (req, res) => {
   res.json(items);
+  res.end();
 });
 
 // Route to add a new item
